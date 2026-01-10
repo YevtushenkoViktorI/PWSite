@@ -1,31 +1,36 @@
 @import "base/colors.css";
 @import "base/typography.css";
 
+/* ===== Reset ===== */
+html, body {
+  margin: 0;
+  height: 100%;
+}
 
 body {
   color: var(--color-accent);
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-  margin: 0;
 }
 
 h1 { font-weight: 800; }
 
+/* ===== Main page background + overlay ===== */
 .main {
   min-height: 100vh;
+  position: relative;
+
+  /* background image (not a color) */
   background-image: url("images/imgMainPage.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-.main {
-  position: relative;
 }
 
 .main::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: var(--color-overlay-main);
   z-index: 0;
 }
 
@@ -40,11 +45,11 @@ h1 { font-weight: 800; }
   top: 0;
   z-index: 50;
 
-  background: rgba(20, 20, 20, 0.35);
+  background: var(--color-nav-surface);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--color-nav-border);
 }
 
 .nav-inner {
@@ -65,7 +70,7 @@ h1 { font-weight: 800; }
   gap: 12px;
 
   text-decoration: none;
-  color: white;
+  color: var(--color-text-inverse);
 }
 
 .brand-icon {
@@ -77,8 +82,8 @@ h1 { font-weight: 800; }
   justify-content: center;
 
   border-radius: 999px;
-  background: rgba(201, 29, 57, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-brand-icon-surface);
+  border: 1px solid var(--color-brand-icon-border);
 }
 
 .brand-icon img {
@@ -105,8 +110,8 @@ h1 { font-weight: 800; }
   gap: 4px;
 
   border-radius: 999px;
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-pill-surface);
+  border: 1px solid var(--color-pill-border);
 }
 
 .lang-option {
@@ -120,16 +125,16 @@ h1 { font-weight: 800; }
 
   font-size: 12px;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-pill-text);
 }
 
 .lang-option:hover {
-  color: white;
+  color: var(--color-text-inverse);
 }
 
 .lang-option.is-active {
-  background: white;
-  color: black;
+  background: var(--color-white);
+  color: var(--color-black);
 }
 
 /* ===== Login button ===== */
@@ -142,9 +147,9 @@ h1 { font-weight: 800; }
   justify-content: center;
 
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid var(--color-btn-border);
 
-  color: white;
+  color: var(--color-text-inverse);
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
@@ -153,6 +158,13 @@ h1 { font-weight: 800; }
 }
 
 .btn-login:hover {
-  background: white;
-  color: black;
+  background: var(--color-btn-hover-bg);
+  color: var(--color-btn-hover-text);
+}
+
+/* ===== Optional: page content spacing ===== */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
 }

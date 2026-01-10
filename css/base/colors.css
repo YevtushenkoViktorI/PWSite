@@ -33,6 +33,33 @@
   --color-glass-border: rgba(255, 255, 255, 0.4);
   --color-glass-border-soft: rgba(255, 255, 255, 0.12);
 
+  /* ===== Added for current UI ===== */
+
+  /* Generic */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Overlay */
+  --color-overlay-main: rgba(0, 0, 0, 0.45);
+
+  /* Top nav (glass) */
+  --color-nav-surface: rgba(20, 20, 20, 0.35);
+  --color-nav-border: rgba(255, 255, 255, 0.08);
+
+  /* Brand icon */
+  --color-brand-icon-surface: rgba(201, 29, 57, 0.25);
+  --color-brand-icon-border: rgba(255, 255, 255, 0.10);
+
+  /* Language switch */
+  --color-pill-surface: rgba(0, 0, 0, 0.40);
+  --color-pill-border: rgba(255, 255, 255, 0.08);
+  --color-pill-text: rgba(255, 255, 255, 0.65);
+
+  /* Buttons */
+  --color-btn-border: rgba(255, 255, 255, 0.35);
+  --color-btn-hover-bg: #ffffff;
+  --color-btn-hover-text: #000000;
+
   /* Shadows */
   --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37);
 }
@@ -50,5 +77,8 @@
 
   --color-glass-surface: rgba(20, 20, 20, 0.6);
   --color-glass-border: rgba(255, 255, 255, 0.12);
-}
 
+  /* Optional: stronger nav + overlay in dark */
+  --color-nav-surface: rgba(20, 20, 20, 0.55);
+  --color-overlay-main: rgba(0, 0, 0, 0.55);
+}

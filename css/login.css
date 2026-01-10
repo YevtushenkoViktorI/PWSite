@@ -1,0 +1,11 @@
+@import "base/colors.css";
+@import "base/typography.css";
+
+
+
+/* ===== Login page: empty full-screen view ===== */
+.login-page {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-bg-light);
+}
