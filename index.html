@@ -1,41 +1,49 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-         <title>Borshch</title>
-        <!-- MAIN STYLES -->
-        <link rel="stylesheet" href="css/main.css" />
-    </head>
-    <body class="main">
-        
-        <header class="top-nav">
-            <div class="nav-inner">
-                
-                <!-- Logo -->
-                <a href="#" class="brand">
-                    <span class="brand-icon">
-                        <img src="css/images/icons/soup.svg" alt="" aria-hidden="true" />
-                    </span>
-                    <span class="brand-text">Borshch</span>
-                </a>
-                
-                <!-- Actions -->
-                <div class="nav-actions">
-                    
-                    <!-- Language switch -->
-                    <div class="lang-switch">
-                        <button class="lang-option is-active" data-lang="uk">UA</button>
-                        <button class="lang-option" data-lang="en">EN</button>
-                        <button class="lang-option" data-lang="de">CH</button>
-                    </div>
-                    
-                    <!-- Login -->
-                    <a href="#" class="btn-login" data-i18n="login">Login</a>
-                </div>
-                
-            </div>
-        </header>
-    </body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borshch</title>
+
+    <!-- MAIN STYLES -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body class="main">
+    <header class="top-nav">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="#" class="brand" aria-label="Home">
+          <span class="brand-icon">
+            <img src="css/images/icons/soup.svg" alt="Borshch logo" />
+          </span>
+          <span class="brand-text" data-i18n="brandName">Borshch</span>
+        </a>
+
+        <!-- Actions -->
+        <div class="nav-actions">
+          <!-- Language switch -->
+          <div class="lang-switch" aria-label="Language switcher">
+            <button class="lang-option is-active" data-lang="uk" type="button">UA</button>
+            <button class="lang-option" data-lang="en" type="button">EN</button>
+            <!-- UI label is CH (Switzerland), language code stays de -->
+            <button class="lang-option" data-lang="de" type="button">CH</button>
+          </div>
+
+          <!-- Login -->
+          <a href="#" class="btn-login" data-i18n="login">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <h1 data-i18n="heroTitle">Borshch</h1>
+      <p data-i18n="heroSubtitle">A warm Ukrainian beet soup with deep flavor.</p>
+
+      <button class="btn-login" type="button" data-i18n="cta">See recipe</button>
+    </main>
+
+    <script src="i18n/script.js"></script>
+  </body>
 </html>
