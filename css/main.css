@@ -1,0 +1,11 @@
+@import "base/colors.css";
+@import "base/typography.css";
+
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+h1 { font-weight: 800; }

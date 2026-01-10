@@ -1,0 +1,54 @@
+/* =========================
+   Color System
+   ========================= */
+
+:root {
+  /* Brand */
+  --color-primary: #c91d39;
+  --color-primary-hover: #a8162e;
+  --color-accent: #D9A03B;
+
+  /* Secondary (Teal family) */
+  --color-secondary: #2a636f;
+  --color-secondary-hover: #264d5a;
+  --color-secondary-dark: #1f4b53;
+
+  /* Backgrounds */
+  --color-bg-light: #fcfaf8;
+  --color-bg-light-ui: #fafafa;
+  --color-bg-light-recipe: #fafaf9;
+
+  --color-bg-dark: #1e1d1a;
+  --color-bg-dark-ui: #18191b;
+  --color-bg-dark-recipe: #282624;
+
+  /* Text */
+  --color-text-main: #131516;
+  --color-text-dark: #1c1c1c;
+  --color-text-inverse: #ffffff;
+  --color-text-muted: #9ca3af;
+
+  /* Glass / Surfaces */
+  --color-glass-surface: rgba(255, 255, 255, 0.65);
+  --color-glass-border: rgba(255, 255, 255, 0.4);
+  --color-glass-border-soft: rgba(255, 255, 255, 0.12);
+
+  /* Shadows */
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+/* =========================
+   Dark Mode Overrides
+   ========================= */
+
+.dark {
+  --color-bg-light: #1e1d1a;
+  --color-bg-light-ui: #18191b;
+
+  --color-text-main: #ffffff;
+  --color-text-muted: #9ca3af;
+
+  --color-glass-surface: rgba(20, 20, 20, 0.6);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+}
+
