@@ -6,10 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login — Borshch</title>
 
+    <!-- Shared styles -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- Login-specific styles -->
+    <link rel="stylesheet" href="css/login.css" />
   </head>
 
-  <body class="login-canvas">
-    <!-- Empty state: full-screen canvas placeholder -->
+  <body class="login-page">
+    <!-- Modal (centered) -->
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button class="modal__close" type="button" aria-label="Close" data-modal-close>
+        ×
+      </button>
+
+      <div class="modal__icon" aria-hidden="true">
+        <span class="modal-icon-glyph">🔒</span>
+      </div>
+
+      <h1 class="modal__title" id="loginTitle" data-i18n="loginModalTitle">
+        Login / Sign in
+      </h1>
+
+      <p class="modal__text" data-i18n="loginModalMessage">
+        Sorry, this functionality is currently under development.
+      </p>
+
+      <button class="modal__action" type="button" data-modal-ok data-i18n="btnOkLoginName">
+        OK →
+      </button>
+    </div>
+
+    <!-- If your i18n script is in /i18n/script.js -->
+    <script src="i18n/script.js"></script>
+
+    <!-- Minimal modal behavior -->
+    <script>
+      const closeEls = document.querySelectorAll("[data-modal-close], [data-modal-ok]");
+      closeEls.forEach((el) => {
+        el.addEventListener("click", () => {
+          // Placeholder behavior: go back to home
+          window.location.href = "index.html";
+        });
+      });
+
+      // ESC closes too
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") window.location.href = "index.html";
+      });
+    </script>
   </body>
 </html>

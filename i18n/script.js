@@ -5,6 +5,9 @@ const I18N = {
     heroTitle: "Borshch",
     heroSubtitle: "A warm Ukrainian beet soup with deep flavor.",
     cta: "See recipe",
+    loginModalTitle: "Login / Sign in",
+    loginModalMessage: "Sorry, this feature is still under development.",
+    btnOkLoginName: "OK →"
   },
   uk: {
     brandName: "Борщ",
@@ -12,6 +15,9 @@ const I18N = {
     heroTitle: "Борщ",
     heroSubtitle: "Теплий український суп із буряком та насиченим смаком.",
     cta: "Дивитись рецепт",
+    loginModalTitle: "Вхід / Реєстрація",
+    loginModalMessage: "Перепрошуємо, дана функціональність на стадії впровадження.",
+    btnOkLoginName: "Зрозуміло →"
   },
   de: {
     brandName: "Borschtsch",
@@ -19,6 +25,9 @@ const I18N = {
     heroTitle: "Borschtsch",
     heroSubtitle: "Eine warme ukrainische Rote-Bete-Suppe mit intensivem Geschmack.",
     cta: "Rezept ansehen",
+    loginModalTitle: "Anmelden / Einloggen",
+    loginModalMessage: "Entschuldigung, diese Funktion befindet sich noch in der Entwicklung.",
+    btnOkLoginName: "Verstanden →"
   },
 };
 
