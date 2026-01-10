@@ -3,9 +3,33 @@
 
 
 body {
-  background-color: var(--color-primary);
-  color: var(--color-text-inverse);
+  color: var(--color-accent);
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  margin: 0;
 }
 
 h1 { font-weight: 800; }
+
+.main {
+  min-height: 100vh;
+  background-image: url("images/imgMainPage.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main {
+  position: relative;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+.main > * {
+  position: relative;
+  z-index: 1;
+}
