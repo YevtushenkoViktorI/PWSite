@@ -1,49 +1,124 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Borshch</title>
 
     <!-- MAIN STYLES -->
     <link rel="stylesheet" href="css/main.css" />
-  </head>
+</head>
 
-  <body class="main">
+<body class="main">
     <header class="top-nav">
-      <div class="nav-inner">
-        <!-- Logo -->
-        <a href="#" class="brand" aria-label="Home">
-          <span class="brand-icon">
-            <img src="css/images/icons/soup.svg" alt="Borshch logo" />
-          </span>
-          <span class="brand-text" data-i18n="brandName">Borshch</span>
-        </a>
+        <div class="container nav-inner">
+            <!-- Logo -->
+            <a href="#" class="brand" aria-label="Home">
+                <span class="brand-icon">
+                    <img src="css/images/icons/soup.svg" alt="Borshch logo" />
+                </span>
+                <span class="brand-text" data-i18n="brandName">Borshch</span>
+            </a>
 
-        <!-- Actions -->
-        <div class="nav-actions">
-          <!-- Language switch -->
-          <div class="lang-switch" aria-label="Language switcher">
-            <button class="lang-option is-active" data-lang="uk" type="button">UA</button>
-            <button class="lang-option" data-lang="en" type="button">EN</button>
-            <!-- UI label is CH (Switzerland), language code stays de -->
-            <button class="lang-option" data-lang="de" type="button">CH</button>
-          </div>
+            <!-- Actions -->
+            <div class="nav-actions">
+                <!-- Language switch -->
+                <div class="lang-switch" aria-label="Language switcher">
+                    <button class="lang-option is-active" data-lang="uk" type="button">UA</button>
+                    <button class="lang-option" data-lang="en" type="button">EN</button>
+                    <!-- UI label is CH (Switzerland), language code stays de -->
+                    <button class="lang-option" data-lang="de" type="button">CH</button>
+                </div>
 
-          <!-- Login -->
-          <a href="login.html" class="btn-login" data-i18n="login">Login</a>
+                <!-- Login -->
+                <a href="login.html" class="btn-login" data-i18n="login">Login</a>
+            </div>
         </div>
-      </div>
     </header>
 
-    <main class="page">
-      <h1 data-i18n="heroTitle">Borshch</h1>
-      <p data-i18n="heroSubtitle">A warm Ukrainian beet soup with deep flavor.</p>
 
-      <button class="btn-login" type="button" data-i18n="cta">See recipe</button>
+
+    <main class="page">
+        <div class="container">
+            <div class="hero-pill">
+                <span class="hero-pill__icon" aria-hidden="true">🔥</span>
+                <span class="hero-pill__text" data-i18n="heritage">CULINARY HERITAGE</span>
+            </div>
+
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-i18n="heroTaste">Title</h1>
+                    <p class="hero-subtitle" data-i18n="heroSubtitle">SubTitle</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="recipe.html" data-i18n="ctaRecipe">
+                            Показати рецепт <span class="btn-arrow" aria-hidden="true">→</span>
+                        </a>
+
+                        <a class="btn btn-secondary" href="#history" data-i18n="ctaHistory">
+                            Дізнатися історію
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- RIGHT: characteristics card -->
+                <aside class="hero-specs" id="heroSpecs" aria-label="Characteristics">
+                    <button class="hero-specs__close" type="button" aria-label="Close" id="heroSpecsClose">
+                        ✕
+                    </button>
+
+                    <div class="hero-specs__header">
+                        <div class="hero-specs__title" data-i18n="specsTitle">Характеристики</div>
+                        <div class="hero-specs__subtitle" data-i18n="specsSubtitle">Рецепт №1</div>
+                    </div>
+
+                    <div class="hero-specs__divider"></div>
+
+                    <ul class="hero-specs__list">
+                        <li class="hero-specs__item">
+                            <span class="hero-specs__icon" aria-hidden="true">🕒</span>
+                            <div class="hero-specs__meta">
+                                <div class="hero-specs__label" data-i18n="specTimeLabel">ЧАС</div>
+                                <div class="hero-specs__value"><span data-i18n="specTimeValue">90 хв</span></div>
+                            </div>
+                        </li>
+
+                        <li class="hero-specs__item">
+                            <span class="hero-specs__icon" aria-hidden="true">👥</span>
+                            <div class="hero-specs__meta">
+                                <div class="hero-specs__label" data-i18n="specServingsLabel">ВИХІД</div>
+                                <div class="hero-specs__value"><span data-i18n="specServingsValue">6 порцій</span></div>
+                            </div>
+                        </li>
+
+                        <li class="hero-specs__item">
+                            <span class="hero-specs__icon" aria-hidden="true">🏷️</span>
+                            <div class="hero-specs__meta">
+                                <div class="hero-specs__label" data-i18n="specTypeLabel">ТИП</div>
+                                <div class="hero-specs__value"><span data-i18n="specTypeValue">Класичний</span></div>
+                            </div>
+                        </li>
+
+                        <li class="hero-specs__item">
+                            <span class="hero-specs__icon" aria-hidden="true">🍲</span>
+                            <div class="hero-specs__meta">
+                                <div class="hero-specs__label" data-i18n="specHeartyLabel">СИТНІСТЬ</div>
+                                <div class="hero-specs__value"><span data-i18n="specHeartyValue">Ситний</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+
+
+
+        </div>
+
     </main>
 
     <script src="i18n/script.js"></script>
-  </body>
+</body>
+
 </html>

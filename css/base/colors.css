@@ -74,6 +74,22 @@
   --color-modal-btn: var(--color-secondary);
   --color-modal-btn-hover: var(--color-secondary-hover);
   --color-modal-btn-text: var(--color-text-inverse);
+
+    /* Hero pill */
+  --color-pill-heritage-bg: rgba(0, 0, 0, 0.35);
+  --color-pill-heritage-border: rgba(255, 255, 255, 0.12);
+  --color-pill-heritage-text: var(--color-accent);
+  --color-pill-heritage-icon: var(--color-accent);
+
+  /* ===== Hero typography colors ===== */
+  --color-hero-title: var(--color-text-inverse);
+  --color-hero-subtitle: rgba(255, 255, 255, 0.72);
+
+  --color-hero-blue: #b7d7f5;     /* “Укр” */
+  --color-hero-yellow: var(--color-accent); /* “аїни” */
+
+  --shadow-hero-title: 0 8px 28px rgba(0, 0, 0, 0.35);
+
 }
 
 /* =========================
@@ -93,4 +109,5 @@
   /* Optional: stronger nav + overlay in dark */
   --color-nav-surface: rgba(20, 20, 20, 0.55);
   --color-overlay-main: rgba(0, 0, 0, 0.55);
+  --color-hero-subtitle: rgba(255, 255, 255, 0.78);
 }
