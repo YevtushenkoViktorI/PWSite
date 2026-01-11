@@ -6,6 +6,7 @@ html,
 body {
   margin: 0;
   height: 100%;
+  background: var(--color-page-bg); /* ✅ щоб не було білого знизу */
 }
 
 /* ===== Global container (single source of truth) ===== */
@@ -24,26 +25,36 @@ h1 {
   font-weight: 800;
 }
 
-/* ===== Main page background + overlay ===== */
-.main {
-  min-height: 100vh;
-  position: relative;
+/* ======================================================
+   ✅ Fixed background layer (does NOT scroll)
+   ====================================================== */
+.bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
 
   background-image: url("images/imgMainPage.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  /* ✅ overlay on top of image */
+  box-shadow: inset 0 0 0 9999px var(--color-overlay-main);
+
+  pointer-events: none;
 }
 
-.main::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--color-overlay-main);
-  z-index: 0;
+/* ===== Main wrapper (content scrolls) ===== */
+.main {
+  min-height: 100svh;
+  position: relative;
+
+  /* ✅ fallback background (if image fails) */
+  background: var(--color-page-bg);
 }
 
-.main > * {
+/* ✅ everything except bg-layer is above it */
+.main > *:not(.bg-layer) {
   position: relative;
   z-index: 1;
 }
@@ -171,7 +182,6 @@ h1 {
 
 /* ===== Page (hero content wrapper) ===== */
 .page {
-  /* замість margin-top у pill — контролюємо відступ тут */
   padding-top: 68px;
 }
 
@@ -207,13 +217,20 @@ h1 {
   letter-spacing: 0.08em;
 }
 
+/* ===== Hero layout: left text + right card ===== */
+.hero-layout{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:32px;
+}
+
 /* ===== Hero text ===== */
 .hero-content {
   max-width: 820px;
   flex: 1;
 }
 
-/* Більше та щільніше — як у дизайні */
 .hero-title {
   margin: 0 0 18px;
 
@@ -226,31 +243,12 @@ h1 {
   text-shadow: var(--shadow-hero-title);
 }
 
-/* Якщо в HTML у тебе line-спани */
-.hero-title--line {
-  display: block;
-}
+.hero-title--line { display:block; }
+.hero-title__blue { color: var(--color-hero-blue); }
+.hero-title__yellow { color: var(--color-hero-yellow); }
+.hero-title--ua { color: var(--color-hero-blue); }
+.hero-title--highlight { color: var(--color-hero-yellow); }
 
-/* 2 кольори для "України"
-   (рекомендовано: зроби в HTML два спани: hero-title__blue + hero-title__yellow) */
-.hero-title__blue {
-  color: var(--color-hero-blue);
-}
-
-.hero-title__yellow {
-  color: var(--color-hero-yellow);
-}
-
-/* Якщо ти все ще використовуєш старі класи (тимчасова сумісність) */
-.hero-title--ua {
-  color: var(--color-hero-blue);
-}
-
-.hero-title--highlight {
-  color: var(--color-hero-yellow);
-}
-
-/* ===== Hero subtitle ===== */
 .hero-subtitle {
   margin: 0;
   max-width: 62ch;
@@ -315,15 +313,7 @@ h1 {
   transform:translateY(1px);
 }
 
-/* ===== Hero layout: left text + right card ===== */
-.hero-layout{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:32px;
-}
-
-/* Right card like glass modal */
+/* ===== Right card like glass modal ===== */
 .hero-specs{
   width:min(520px, 42vw);
   padding:26px 26px 22px;

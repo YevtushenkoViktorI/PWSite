@@ -12,6 +12,10 @@
 </head>
 
 <body class="main">
+
+    <!-- ✅ Fixed background + overlay layer (does NOT scroll) -->
+    <div class="bg-layer" aria-hidden="true"></div>
+
     <header class="top-nav">
         <div class="container nav-inner">
             <!-- Logo -->
@@ -28,7 +32,6 @@
                 <div class="lang-switch" aria-label="Language switcher">
                     <button class="lang-option is-active" data-lang="uk" type="button">UA</button>
                     <button class="lang-option" data-lang="en" type="button">EN</button>
-                    <!-- UI label is CH (Switzerland), language code stays de -->
                     <button class="lang-option" data-lang="de" type="button">CH</button>
                 </div>
 
@@ -37,8 +40,6 @@
             </div>
         </div>
     </header>
-
-
 
     <main class="page">
         <div class="container">
@@ -51,6 +52,7 @@
                 <div class="hero-content">
                     <h1 class="hero-title" data-i18n="heroTaste">Title</h1>
                     <p class="hero-subtitle" data-i18n="heroSubtitle">SubTitle</p>
+
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="recipe.html" data-i18n="ctaRecipe">
                             Показати рецепт <span class="btn-arrow" aria-hidden="true">→</span>
@@ -61,7 +63,6 @@
                         </a>
                     </div>
                 </div>
-
 
                 <!-- RIGHT: characteristics card -->
                 <aside class="hero-specs" id="heroSpecs" aria-label="Characteristics">
@@ -111,11 +112,7 @@
                     </ul>
                 </aside>
             </div>
-
-
-
         </div>
-
     </main>
 
     <script src="i18n/script.js"></script>

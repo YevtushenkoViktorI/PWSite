@@ -82,6 +82,8 @@
   /* Primary button glow */
   --shadow-primary-glow: 0 0 24px rgba(201, 29, 57, 0.35);
   --shadow-primary-glow-hover: 0 0 28px rgba(201, 29, 57, 0.45);
+
+   --color-page-bg: #0b0b0b;
 }
 
 /* =================================================
