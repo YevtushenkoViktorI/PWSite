@@ -9,6 +9,10 @@
   --color-primary-hover: #a8162e;
   --color-accent: #d9a03b;
 
+  /* Aliases (so old classes keep working) */
+  --color-secondary: var(--color-primary);
+  --color-secondary-hover: var(--color-primary-hover);
+
   /* ========== Neutrals ========= */
   --color-white: #ffffff;
   --color-black: #000000;
@@ -83,7 +87,32 @@
   --shadow-primary-glow: 0 0 24px rgba(201, 29, 57, 0.35);
   --shadow-primary-glow-hover: 0 0 28px rgba(201, 29, 57, 0.45);
 
-   --color-page-bg: #0b0b0b;
+  /* Page */
+  --color-page-bg: #0b0b0b;
+
+  /* =================================================
+     Login modal tokens (no hardcoded colors in login.css)
+     ================================================= */
+
+  --blur-login-overlay: 18px;
+  --radius-modal: 22px;
+
+  --color-modal-surface: rgba(255, 255, 255, 0.82);
+  --color-modal-border: rgba(0, 0, 0, 0.06);
+
+  --color-modal-close-bg: rgba(0, 0, 0, 0.06);
+  --color-modal-close-bg-hover: rgba(0, 0, 0, 0.10);
+  --color-modal-close-text: rgba(0, 0, 0, 0.55);
+  --color-modal-close-text-hover: rgba(0, 0, 0, 0.75);
+
+  --color-modal-icon-surface: rgba(42, 99, 111, 0.12);
+  --filter-modal-icon: brightness(0) saturate(100%) invert(24%) sepia(17%)
+    saturate(1500%) hue-rotate(145deg);
+
+  --color-modal-text-muted: rgba(0, 0, 0, 0.55);
+
+  --shadow-modal: 0 18px 60px rgba(0, 0, 0, 0.25);
+  --shadow-modal-button: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 /* =================================================
