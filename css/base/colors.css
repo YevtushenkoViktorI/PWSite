@@ -106,15 +106,14 @@
   --color-modal-close-text-hover: rgba(0, 0, 0, 0.75);
 
   --color-modal-icon-surface: rgba(42, 99, 111, 0.12);
-  --filter-modal-icon: brightness(0) saturate(100%) invert(24%) sepia(17%)
-    saturate(1500%) hue-rotate(145deg);
+  --filter-modal-icon: brightness(0) saturate(100%) invert(24%) sepia(17%) saturate(1500%) hue-rotate(145deg);
 
   --color-modal-text-muted: rgba(0, 0, 0, 0.55);
 
   --shadow-modal: 0 18px 60px rgba(0, 0, 0, 0.25);
   --shadow-modal-button: 0 10px 24px rgba(0, 0, 0, 0.18);
 
-    --color-page-bg: #0b0c0d;
+  --color-page-bg: #0b0c0d;
 
   /* overlay затемнення */
   --color-overlay-main: rgba(0, 0, 0, 0.35);
@@ -125,7 +124,7 @@
   /* blur значення */
   --blur-bg: 18px;
 
-    /* Nav tabs */
+  /* Nav tabs */
   --color-nav-tabs-bg: rgba(255, 255, 255, 0.28);
   --color-nav-tabs-border: rgba(255, 255, 255, 0.28);
   --color-nav-tab-text: rgba(0, 0, 0, 0.55);
@@ -140,10 +139,10 @@
   --color-save-text: rgba(255, 255, 255, 0.92);
   --color-save-border: rgba(255, 255, 255, 0.12);
 
-    /* Recipe top nav (light glass) */
+  /* Recipe top nav (light glass) */
   --recipe-nav-surface: rgba(245, 246, 248, 0.62);
   --recipe-nav-border: rgba(255, 255, 255, 0.55);
-  --recipe-nav-shadow: 0 18px 60px rgba(0,0,0,0.18);
+  --recipe-nav-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
 
   /* Tabs pill */
   --recipe-tabs-surface: rgba(255, 255, 255, 0.55);
@@ -157,44 +156,44 @@
   /* Save button */
   --recipe-save-bg: rgba(16, 28, 48, 0.92);
   --recipe-save-text: #ffffff;
-  --recipe-save-shadow: 0 12px 26px rgba(0,0,0,0.22);
+  --recipe-save-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
 
-   /* Page */
+  /* Page */
   --color-page-bg: #0f1416;
 
   /* Background overlays */
-  --color-overlay-main: rgba(0,0,0,.18);
-  --color-overlay-glass: rgba(255,255,255,.10);
+  --color-overlay-main: rgba(0, 0, 0, .18);
+  --color-overlay-glass: rgba(255, 255, 255, .10);
   --blur-bg: 18px;
 
   /* Nav */
-  --recipe-nav-surface: rgba(255,255,255,.35);
-  --recipe-nav-border: rgba(255,255,255,.20);
-  --recipe-nav-shadow: 0 18px 50px rgba(0,0,0,.18);
+  --recipe-nav-surface: rgba(255, 255, 255, .35);
+  --recipe-nav-border: rgba(255, 255, 255, .20);
+  --recipe-nav-shadow: 0 18px 50px rgba(0, 0, 0, .18);
 
   /* Brand */
-  --recipe-brand-text: rgba(10,20,28,.88);
+  --recipe-brand-text: rgba(10, 20, 28, .88);
 
   /* Tabs */
-  --recipe-tabs-surface: rgba(255,255,255,.55);
-  --recipe-tabs-border: rgba(255,255,255,.30);
-  --recipe-tab-text: rgba(10,20,28,.55);
-  --recipe-tab-hover: rgba(10,20,28,.75);
-  --recipe-tab-active: rgba(10,20,28,.92);
+  --recipe-tabs-surface: rgba(255, 255, 255, .55);
+  --recipe-tabs-border: rgba(255, 255, 255, .30);
+  --recipe-tab-text: rgba(10, 20, 28, .55);
+  --recipe-tab-hover: rgba(10, 20, 28, .75);
+  --recipe-tab-active: rgba(10, 20, 28, .92);
 
   /* Save button */
-  --recipe-save-bg: rgba(10,20,28,.88);
-  --recipe-save-text: rgba(255,255,255,.92);
-  --recipe-save-shadow: 0 14px 34px rgba(0,0,0,.22);
+  --recipe-save-bg: rgba(10, 20, 28, .88);
+  --recipe-save-text: rgba(255, 255, 255, .92);
+  --recipe-save-shadow: 0 14px 34px rgba(0, 0, 0, .22);
 
   /* Panels (glass) */
-  --recipe-panel-surface: rgba(255,255,255,.55);
-  --recipe-panel-border: rgba(255,255,255,.30);
-  --recipe-panel-shadow: 0 18px 60px rgba(0,0,0,.22);
+  --recipe-panel-surface: rgba(255, 255, 255, .55);
+  --recipe-panel-border: rgba(255, 255, 255, .30);
+  --recipe-panel-shadow: 0 18px 60px rgba(0, 0, 0, .22);
 
   /* Text */
-  --recipe-text: rgba(10,20,28,.88);
-  --recipe-muted: rgba(10,20,28,.55);
+  --recipe-text: rgba(10, 20, 28, .88);
+  --recipe-muted: rgba(10, 20, 28, .55);
 
   /* Panels + inner blocks */
   --recipe-panel-inner-bg: rgba(255, 255, 255, 0.08);
@@ -218,6 +217,25 @@
 
   /* Hover helpers (optional but часто треба) */
   --recipe-hover-surface: rgba(255, 255, 255, 0.14);
+
+  --recipe-check-border: rgba(255, 255, 255, 0.28);
+  --recipe-check-fill: var(--color-accent);
+
+  --recipe-primary: #2a636f;
+
+  --recipe-card-bg: rgba(255, 255, 255, 0.30);
+  --recipe-card-bg-hover: rgba(255, 255, 255, 0.38);
+  --recipe-card-border: rgba(255, 255, 255, 0.35);
+
+  --recipe-checkbox-bg: rgba(255, 255, 255, 0.55);
+  --recipe-checkbox-border: rgba(148, 163, 184, 0.65);
+  /* slate-300-ish */
+
+  --recipe-text-strong: rgba(15, 23, 42, 0.88);
+  /* slate-900-ish */
+  --recipe-text: rgba(15, 23, 42, 0.78);
+  --recipe-text-muted: rgba(15, 23, 42, 0.55);
+
 }
 
 /* =================================================

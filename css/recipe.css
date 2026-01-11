@@ -258,18 +258,20 @@ body.recipe > *:not(.bg-layer) {
   gap: 16px;
 }
 
-.panel-title {
+.panel-title{
   margin: 0;
-  font-size: 26px;
+  font-size: 24px;     /* було 26 */
   font-weight: 800;
-  color: var(--recipe-text);
+  letter-spacing: -0.01em;
+  color: var(--recipe-text-strong);
 }
 
-.panel-subtitle {
+.panel-subtitle{
   margin: 6px 0 0;
-  font-size: 12px;
+  font-size: 11px;     /* було 12 */
   letter-spacing: 0.12em;
-  color: var(--recipe-muted);
+  text-transform: uppercase;
+  color: var(--recipe-text-muted);
 }
 
 /* servings control like pill */
@@ -345,3 +347,127 @@ body.recipe > *:not(.bg-layer) {
   .recipe-nav__cta { grid-area: cta; }
   .recipe-nav__tabs { grid-area: tabs; justify-self: center; }
 }
+
+/* =========================
+   Ingredients list (left card) — match design
+   ========================= */
+
+.ingredients-list{
+  padding-top: 8px;
+}
+
+.ingredients-group__title{
+  margin: 12px 0 10px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--recipe-text-muted);
+}
+
+/* card row */
+.ingredient-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  padding: 14px 14px;
+  border-radius: 18px;
+
+  cursor: pointer;
+  user-select: none;
+
+  background: var(--recipe-card-bg);
+  border: 1px solid var(--recipe-card-border);
+
+  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+}
+
+.ingredient-item + .ingredient-item{
+  margin-top: 14px;
+}
+
+.ingredient-item:hover{
+  transform: translateY(-1px);
+  background: var(--recipe-card-bg-hover);
+}
+
+/* hide real checkbox */
+.ingredient-check{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* circle */
+.ingredient-dot{
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+
+  border-radius: 999px;
+  border: 2px solid var(--recipe-checkbox-border);
+  background: var(--recipe-checkbox-bg);
+
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+/* checkmark */
+.ingredient-dot::after{
+  content: "";
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid rgba(255,255,255,0.95);
+  border-bottom: 2px solid rgba(255,255,255,0.95);
+  transform: rotate(-45deg);
+  opacity: 0;
+}
+
+/* text */
+.ingredient-body{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.ingredient-line{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  line-height: 1.15;
+  color: var(--recipe-text-strong);
+  font-weight: 700;
+  font-size: 16px; /* зменшили */
+}
+
+.ingredient-line strong{
+  font-weight: 800;
+}
+
+.ingredient-body small{
+  font-size: 12px;  /* як у дизайні */
+  color: var(--recipe-text-muted);
+  font-weight: 500;
+}
+
+/* checked state (teal) */
+.ingredient-item:has(.ingredient-check:checked) .ingredient-dot{
+  border-color: var(--recipe-primary);
+  background: var(--recipe-primary);
+}
+
+.ingredient-item:has(.ingredient-check:checked) .ingredient-dot::after{
+  opacity: 1;
+}
+
+.ingredient-item:has(.ingredient-check:checked) .ingredient-line,
+.ingredient-item:has(.ingredient-check:checked) small{
+  color: rgba(15, 23, 42, 0.45);
+  text-decoration: line-through;
+}
+

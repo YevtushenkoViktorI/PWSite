@@ -16,7 +16,9 @@ const I18N = {
       <span class="hero-title--line">the taste of</span>
       <span class="hero-title--line">Ukraine’s history</span>
     `.trim(),
-    heroSubtitle: "Discover the secrets of a national dish that connects generations through centuries of flavor and tradition.",
+
+    heroSubtitle:
+      "Discover the secrets of a national dish that connects generations through centuries of flavor and tradition.",
     ctaRecipe: "See recipe →",
     ctaHistory: "Learn the history",
     specsTitle: "Characteristics",
@@ -29,7 +31,33 @@ const I18N = {
     specTypeValue: "Classic",
     specHeartyLabel: "HEARTINESS",
     specHeartyValue: "Hearty",
+
+    // Recipe page
+    recipeBrandTitle: "Borsch Masterclass",
+    recipeNavHome: "Home",
+    recipeNavRecipe: "Recipe",
+    recipeNavHistory: "History",
+    recipeNavShop: "Shop",
+    recipeSave: "Save",
+
+    ingredientsTitle: "Ingredients",
+    ingredientsSubtitle: "FOR THE BASE",
+    ingredientsServingsShort: "serv",
+    ingBeets: "Beets",
+    ingBeetsNote: "Fresh, medium-sized",
+    ingCabbage: "Cabbage",
+    ingCabbageNote: "White or mixed",
+    ingCarrots: "Carrots",
+    ingCarrotsNote: "Medium size",
+    ingOnion: "Large onion",
+    ingOnionNote: "1 pc",
+    ingStock: "Beef stock",
+    ingStockNote: "Or water (2.5–3 L)",
+    ingPotatoes: "Potatoes",
+    ingPotatoesNote: "3–4 medium size",
+
   },
+
   uk: {
     brandName: "Борщ",
     login: "Увійти",
@@ -49,10 +77,12 @@ const I18N = {
         <span class="hero-title__blue">Укр</span><span class="hero-title__yellow">аїни</span>
       </span>
     `.trim(),
-    heroSubtitle: "Відкрийте для себе секрети національної страви, що об’єднує покоління через століття смаку та традицій.",
+
+    heroSubtitle:
+      "Відкрийте для себе секрети національної страви, що об’єднує покоління через століття смаку та традицій.",
     ctaRecipe: "Показати рецепт →",
     ctaHistory: "Дізнатися історію",
-    // uk
+
     specsTitle: "Характеристики",
     specsSubtitle: "Рецепт №1",
     specTimeLabel: "ЧАС",
@@ -64,7 +94,32 @@ const I18N = {
     specHeartyLabel: "СИТНІСТЬ",
     specHeartyValue: "Ситний",
 
+    // Recipe page
+    recipeBrandTitle: "Borsch Masterclass",
+    recipeNavHome: "Головна",
+    recipeNavRecipe: "Рецепт",
+    recipeNavHistory: "Історія",
+    recipeNavShop: "Магазин",
+    recipeSave: "Зберегти",
+
+    ingredientsTitle: "Інгредієнти",
+    ingredientsSubtitle: "ДЛЯ ОСНОВИ",
+    ingredientsServingsShort: "порц.",
+    ingBeets: "Буряк",
+    ingBeetsNote: "Свіжий, середній",
+    ingCabbage: "Капуста",
+    ingCabbageNote: "Біла або суміш",
+    ingCarrots: "Морква",
+    ingCarrotsNote: "Середня",
+    ingOnion: "Цибуля велика",
+    ingOnionNote: "1 шт",
+    ingStock: "Бульйон яловичий",
+    ingStockNote: "Або вода (2.5–3 л)",
+    ingPotatoes: "Картопля",
+    ingPotatoesNote: "3–4 середні",
+
   },
+
   de: {
     brandName: "Borschtsch",
     login: "Anmelden",
@@ -81,7 +136,9 @@ const I18N = {
       <span class="hero-title--line">der Geschmack</span>
       <span class="hero-title--line">der Geschichte der Ukraine</span>
     `.trim(),
-    heroSubtitle: "Entdecken Sie die Geheimnisse eines Nationalgerichts, das Generationen über Jahrhunderte hinweg durch Geschmack und Tradition verbindet.",
+
+    heroSubtitle:
+      "Entdecken Sie die Geheimnisse eines Nationalgerichts, das Generationen über Jahrhunderte hinweg durch Geschmack und Tradition verbindet.",
     ctaRecipe: "Rezept ansehen →",
     ctaHistory: "Geschichte entdecken",
     specsTitle: "Eigenschaften",
@@ -94,38 +151,70 @@ const I18N = {
     specTypeValue: "Klassisch",
     specHeartyLabel: "SÄTTIGEND",
     specHeartyValue: "Sättigend",
+
+    // Recipe page
+    recipeBrandTitle: "Borsch Masterclass",
+    recipeNavHome: "Home",
+    recipeNavRecipe: "Rezept",
+    recipeNavHistory: "Geschichte",
+    recipeNavShop: "Shop",
+    recipeSave: "Speichern",
+
+    ingredientsTitle: "Zutaten",
+    ingredientsSubtitle: "FÜR DIE BASIS",
+    ingredientsServingsShort: "Port.",
+    ingBeets: "Rote Bete",
+    ingBeetsNote: "Frisch, mittelgroß",
+    ingCabbage: "Kohl",
+    ingCabbageNote: "Weißkohl oder gemischt",
+    ingCarrots: "Karotten",
+    ingCarrotsNote: "Mittelgroß",
+    ingOnion: "Große Zwiebel",
+    ingOnionNote: "1 Stk.",
+    ingStock: "Rinderbrühe",
+    ingStockNote: "Oder Wasser (2,5–3 L)",
+    ingPotatoes: "Kartoffeln",
+    ingPotatoesNote: "3–4 mittelgroß",
+
   },
 };
 
 const HTML_KEYS = new Set(["heroTaste"]);
+let activeLang = "en";
 
 function applyLanguage(lang) {
-  const dict = I18N[lang] || I18N.en;
+  activeLang = I18N[lang] ? lang : "en";
+  const dict = I18N[activeLang];
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     if (!Object.prototype.hasOwnProperty.call(dict, key)) return;
 
     if (HTML_KEYS.has(key)) {
-      el.innerHTML = dict[key];   // ✅ важливо
+      el.innerHTML = dict[key];
     } else {
       el.textContent = dict[key];
     }
   });
 
-  document.documentElement.setAttribute("lang", lang);
+  document.documentElement.setAttribute("lang", activeLang);
+  localStorage.setItem("lang", activeLang);
 
+  // ✅ move pill / active button
   document.querySelectorAll(".lang-option").forEach((btn) => {
-    btn.classList.toggle("is-active", btn.dataset.lang === lang);
+    btn.classList.toggle("is-active", btn.dataset.lang === activeLang);
   });
 
-  localStorage.setItem("lang", lang);
+  // 🔗 hook for recipe.js
+  if (window.onRecipeLanguageChange) {
+    window.onRecipeLanguageChange();
+  }
 }
+
 
 function initLanguageSwitcher() {
   const saved = localStorage.getItem("lang");
-
-  const browserLang = (navigator.language || "en").slice(0, 2); // de-CH -> de
+  const browserLang = (navigator.language || "en").slice(0, 2);
   const defaultLang = saved || (I18N[browserLang] ? browserLang : "en");
 
   applyLanguage(defaultLang);
@@ -135,4 +224,5 @@ function initLanguageSwitcher() {
   });
 }
 
+// ✅ BOOT
 initLanguageSwitcher();

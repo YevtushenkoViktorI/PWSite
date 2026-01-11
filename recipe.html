@@ -1,6 +1,6 @@
-<!-- index.html -->
-<!DOCTYPE html>
+<!-- recipe.html -->
 
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,54 +20,56 @@
                 <span class="recipe-nav__logo" aria-hidden="true">
                     <img src="css/images/icons/soup.svg" alt="" />
                 </span>
-                <span class="recipe-nav__title">Borsch Masterclass</span>
+                <span class="recipe-nav__title" data-i18n="recipeBrandTitle">Borsch Masterclass</span>
             </a>
 
             <!-- Center: segmented -->
             <nav class="recipe-nav__tabs" aria-label="Primary">
-                <a class="recipe-tab" href="index.html">Home</a>
-                <a class="recipe-tab is-active" href="recipe.html">Recipe</a>
-                <a class="recipe-tab" href="#history">History</a>
-                <a class="recipe-tab" href="#shop">Shop</a>
+                <a class="recipe-tab" href="index.html" data-i18n="recipeNavHome">Home</a>
+                <a class="recipe-tab is-active" href="recipe.html" data-i18n="recipeNavRecipe">Recipe</a>
+                <a class="recipe-tab" href="#history" data-i18n="recipeNavHistory">History</a>
+                <a class="recipe-tab" href="#shop" data-i18n="recipeNavShop">Shop</a>
             </nav>
 
             <!-- Right: action -->
-            <a class="recipe-nav__cta" href="#" role="button">Save</a>
+            <a class="recipe-nav__cta" href="#" role="button" data-i18n="recipeSave">Save</a>
         </div>
     </header>
 
-     <!-- ✅ ОЦЕ ГОЛОВНЕ: grid wrapper -->
-  <main class="recipe-page">
-    <div class="container recipe-layout">
+    <!-- ✅ Grid wrapper -->
+    <main class="recipe-page">
+        <div class="container recipe-layout">
 
-      <aside class="glass-panel ingredients-panel">
-        <header class="panel-header">
-          <div class="panel-header__row">
-            <div>
-              <h2 class="panel-title">Ingredients</h2>
-              <p class="panel-subtitle">FOR THE BASE</p>
-            </div>
+            <aside class="glass-panel ingredients-panel">
+                <header class="panel-header">
+                    <div class="panel-header__row">
+                        <div>
+                            <h2 class="panel-title" data-i18n="ingredientsTitle">Ingredients</h2>
+                            <p class="panel-subtitle" data-i18n="ingredientsSubtitle">FOR THE BASE</p>
+                        </div>
 
-            <div class="servings-control" aria-label="Servings">
-              <button class="servings-btn" type="button">−</button>
-              <span class="servings-value">4 serv</span>
-              <button class="servings-btn" type="button">+</button>
-            </div>
-          </div>
-        </header>
+                        <div class="servings-control" aria-label="Servings">
+                            <button class="servings-btn" id="servingsMinus" type="button">−</button>
+                            <span class="servings-value" id="servingsValue"></span>
+                            <button class="servings-btn" id="servingsPlus" type="button">+</button>
+                        </div>
+                    </div>
+                </header>
 
-        <div class="ingredients-scroll">
-          ...
+                <div class="ingredients-scroll">
+                    <div class="ingredients-list" id="ingredientsList"></div>
+                </div>
+            </aside>
+
+            <section class="glass-panel steps-panel">
+                <!-- steps content later -->
+            </section>
+
         </div>
-      </aside>
+    </main>
 
-      <!-- ✅ Права панель (steps) теж тут, як 2-га колонка -->
-      <section class="glass-panel steps-panel">
-        ...
-      </section>
-
-    </div>
-  </main>
+    <script src="i18n/script.js"></script>
+    <script src="js/recipe.js"></script>
 </body>
 
 </html>
