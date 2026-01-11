@@ -1,113 +1,95 @@
-/* =========================
-   Color System
-   ========================= */
+/* =================================================
+   Global Color & Shadow Tokens
+   Single source of truth
+   ================================================= */
 
 :root {
-  /* Brand */
+  /* ========== Brand ========= */
   --color-primary: #c91d39;
   --color-primary-hover: #a8162e;
-  --color-accent: #D9A03B;
+  --color-accent: #d9a03b;
 
-  /* Secondary (Teal family) */
-  --color-secondary: #2a636f;
-  --color-secondary-hover: #264d5a;
-  --color-secondary-dark: #1f4b53;
-
-  /* Backgrounds */
-  --color-bg-light: #fcfaf8;
-  --color-bg-light-ui: #fafafa;
-  --color-bg-light-recipe: #fafaf9;
-
-  --color-bg-dark: #1e1d1a;
-  --color-bg-dark-ui: #18191b;
-  --color-bg-dark-recipe: #282624;
-
-  /* Text */
-  --color-text-main: #131516;
-  --color-text-dark: #1c1c1c;
-  --color-text-inverse: #ffffff;
-  --color-text-muted: #9ca3af;
-
-  /* Glass / Surfaces */
-  --color-glass-surface: rgba(255, 255, 255, 0.65);
-  --color-glass-border: rgba(255, 255, 255, 0.4);
-  --color-glass-border-soft: rgba(255, 255, 255, 0.12);
-
-  /* ===== Added for current UI ===== */
-
-  /* Generic */
+  /* ========== Neutrals ========= */
   --color-white: #ffffff;
   --color-black: #000000;
 
-  /* Overlay */
-  --color-overlay-main: rgba(0, 0, 0, 0.45);
+  /* ========== Text ========= */
+  --color-text-main: #131516;
+  --color-text-inverse: #ffffff;
 
-  /* Top nav (glass) */
+  --color-text-muted-40: rgba(255, 255, 255, 0.40);
+  --color-text-muted-55: rgba(255, 255, 255, 0.55);
+  --color-text-muted-65: rgba(255, 255, 255, 0.65);
+  --color-text-muted-72: rgba(255, 255, 255, 0.72);
+  --color-text-muted-78: rgba(255, 255, 255, 0.78);
+
+  /* ========== Overlays ========= */
+  --color-overlay-main: rgba(0, 0, 0, 0.45);
+  --color-overlay-main-strong: rgba(0, 0, 0, 0.55);
+
+  /* ========== Navigation (glass) ========= */
   --color-nav-surface: rgba(20, 20, 20, 0.35);
+  --color-nav-surface-strong: rgba(20, 20, 20, 0.55);
   --color-nav-border: rgba(255, 255, 255, 0.08);
 
-  /* Brand icon */
+  /* ========== Brand icon ========= */
   --color-brand-icon-surface: rgba(201, 29, 57, 0.25);
   --color-brand-icon-border: rgba(255, 255, 255, 0.10);
 
-  /* Language switch */
+  /* ========== Pills ========= */
   --color-pill-surface: rgba(0, 0, 0, 0.40);
   --color-pill-border: rgba(255, 255, 255, 0.08);
-  --color-pill-text: rgba(255, 255, 255, 0.65);
+  --color-pill-text: var(--color-text-muted-65);
 
-  /* Buttons */
-  --color-btn-border: rgba(255, 255, 255, 0.35);
-  --color-btn-hover-bg: #ffffff;
-  --color-btn-hover-text: #000000;
-
-  /* Shadows */
-  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37);
-
-    /* Modal */
-  --color-modal-card: rgba(255, 255, 255, 0.82);
-  --color-modal-border: rgba(0, 0, 0, 0.06);
-  --color-modal-text: rgba(19, 21, 22, 0.65);
-
-  --color-modal-close: rgba(19, 21, 22, 0.45);
-  --color-modal-close-hover: rgba(19, 21, 22, 0.75);
-
-  --color-modal-btn: var(--color-secondary);
-  --color-modal-btn-hover: var(--color-secondary-hover);
-  --color-modal-btn-text: var(--color-text-inverse);
-
-    /* Hero pill */
+  /* Heritage pill */
   --color-pill-heritage-bg: rgba(0, 0, 0, 0.35);
   --color-pill-heritage-border: rgba(255, 255, 255, 0.12);
   --color-pill-heritage-text: var(--color-accent);
   --color-pill-heritage-icon: var(--color-accent);
 
-  /* ===== Hero typography colors ===== */
+  /* ========== Buttons ========= */
+  --color-btn-border: rgba(255, 255, 255, 0.35);
+  --color-btn-hover-bg: var(--color-white);
+  --color-btn-hover-text: var(--color-black);
+
+  /* ========== Hero ========= */
   --color-hero-title: var(--color-text-inverse);
-  --color-hero-subtitle: rgba(255, 255, 255, 0.72);
+  --color-hero-subtitle: var(--color-text-muted-72);
 
-  --color-hero-blue: #b7d7f5;     /* “Укр” */
-  --color-hero-yellow: var(--color-accent); /* “аїни” */
+  --color-hero-blue: #b7d7f5;
+  --color-hero-yellow: var(--color-accent);
 
+  /* ========== Glass surfaces ========= */
+  --color-glass-surface: rgba(255, 255, 255, 0.06);
+  --color-glass-border: rgba(255, 255, 255, 0.14);
+
+  /* Glass elements (icons, buttons) */
+  --color-glass-icon-bg: rgba(0, 0, 0, 0.28);
+  --color-glass-icon-border: rgba(255, 255, 255, 0.10);
+
+  --color-glass-close-bg: rgba(0, 0, 0, 0.25);
+  --color-glass-close-bg-hover: rgba(255, 255, 255, 0.12);
+  --color-glass-close-border: rgba(255, 255, 255, 0.10);
+  --color-glass-close-text: rgba(255, 255, 255, 0.75);
+
+  /* Dividers */
+  --color-divider-light: rgba(255, 255, 255, 0.10);
+
+  /* ========== Shadows ========= */
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.37);
   --shadow-hero-title: 0 8px 28px rgba(0, 0, 0, 0.35);
 
+  /* Primary button glow */
+  --shadow-primary-glow: 0 0 24px rgba(201, 29, 57, 0.35);
+  --shadow-primary-glow-hover: 0 0 28px rgba(201, 29, 57, 0.45);
 }
 
-/* =========================
-   Dark Mode Overrides
-   ========================= */
+/* =================================================
+   Dark mode overrides
+   ================================================= */
 
 .dark {
-  --color-bg-light: #1e1d1a;
-  --color-bg-light-ui: #18191b;
-
-  --color-text-main: #ffffff;
-  --color-text-muted: #9ca3af;
-
-  --color-glass-surface: rgba(20, 20, 20, 0.6);
-  --color-glass-border: rgba(255, 255, 255, 0.12);
-
-  /* Optional: stronger nav + overlay in dark */
-  --color-nav-surface: rgba(20, 20, 20, 0.55);
-  --color-overlay-main: rgba(0, 0, 0, 0.55);
-  --color-hero-subtitle: rgba(255, 255, 255, 0.78);
+  --color-nav-surface: var(--color-nav-surface-strong);
+  --color-overlay-main: var(--color-overlay-main-strong);
+  --color-hero-subtitle: var(--color-text-muted-78);
 }
