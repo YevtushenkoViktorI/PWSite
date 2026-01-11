@@ -113,6 +113,111 @@
 
   --shadow-modal: 0 18px 60px rgba(0, 0, 0, 0.25);
   --shadow-modal-button: 0 10px 24px rgba(0, 0, 0, 0.18);
+
+    --color-page-bg: #0b0c0d;
+
+  /* overlay затемнення */
+  --color-overlay-main: rgba(0, 0, 0, 0.35);
+
+  /* "glass" overlay для м’якого шару */
+  --color-overlay-glass: rgba(255, 255, 255, 0.06);
+
+  /* blur значення */
+  --blur-bg: 18px;
+
+    /* Nav tabs */
+  --color-nav-tabs-bg: rgba(255, 255, 255, 0.28);
+  --color-nav-tabs-border: rgba(255, 255, 255, 0.28);
+  --color-nav-tab-text: rgba(0, 0, 0, 0.55);
+
+  --color-nav-tab-hover-bg: rgba(255, 255, 255, 0.22);
+
+  --color-nav-tab-active-bg: rgba(255, 255, 255, 0.78);
+  --color-nav-tab-active-text: rgba(0, 0, 0, 0.85);
+
+  /* Save button (dark pill) */
+  --color-save-bg: rgba(12, 20, 38, 0.88);
+  --color-save-text: rgba(255, 255, 255, 0.92);
+  --color-save-border: rgba(255, 255, 255, 0.12);
+
+    /* Recipe top nav (light glass) */
+  --recipe-nav-surface: rgba(245, 246, 248, 0.62);
+  --recipe-nav-border: rgba(255, 255, 255, 0.55);
+  --recipe-nav-shadow: 0 18px 60px rgba(0,0,0,0.18);
+
+  /* Tabs pill */
+  --recipe-tabs-surface: rgba(255, 255, 255, 0.55);
+  --recipe-tabs-border: rgba(255, 255, 255, 0.55);
+  --recipe-tab-text: rgba(25, 30, 36, 0.70);
+  --recipe-tab-active: rgba(25, 30, 36, 0.92);
+
+  /* Brand */
+  --recipe-brand-text: rgba(25, 30, 36, 0.92);
+
+  /* Save button */
+  --recipe-save-bg: rgba(16, 28, 48, 0.92);
+  --recipe-save-text: #ffffff;
+  --recipe-save-shadow: 0 12px 26px rgba(0,0,0,0.22);
+
+   /* Page */
+  --color-page-bg: #0f1416;
+
+  /* Background overlays */
+  --color-overlay-main: rgba(0,0,0,.18);
+  --color-overlay-glass: rgba(255,255,255,.10);
+  --blur-bg: 18px;
+
+  /* Nav */
+  --recipe-nav-surface: rgba(255,255,255,.35);
+  --recipe-nav-border: rgba(255,255,255,.20);
+  --recipe-nav-shadow: 0 18px 50px rgba(0,0,0,.18);
+
+  /* Brand */
+  --recipe-brand-text: rgba(10,20,28,.88);
+
+  /* Tabs */
+  --recipe-tabs-surface: rgba(255,255,255,.55);
+  --recipe-tabs-border: rgba(255,255,255,.30);
+  --recipe-tab-text: rgba(10,20,28,.55);
+  --recipe-tab-hover: rgba(10,20,28,.75);
+  --recipe-tab-active: rgba(10,20,28,.92);
+
+  /* Save button */
+  --recipe-save-bg: rgba(10,20,28,.88);
+  --recipe-save-text: rgba(255,255,255,.92);
+  --recipe-save-shadow: 0 14px 34px rgba(0,0,0,.22);
+
+  /* Panels (glass) */
+  --recipe-panel-surface: rgba(255,255,255,.55);
+  --recipe-panel-border: rgba(255,255,255,.30);
+  --recipe-panel-shadow: 0 18px 60px rgba(0,0,0,.22);
+
+  /* Text */
+  --recipe-text: rgba(10,20,28,.88);
+  --recipe-muted: rgba(10,20,28,.55);
+
+  /* Panels + inner blocks */
+  --recipe-panel-inner-bg: rgba(255, 255, 255, 0.08);
+  --recipe-panel-divider: rgba(255, 255, 255, 0.20);
+
+  /* Ingredients checkbox */
+  --recipe-check-border: rgba(255, 255, 255, 0.28);
+  --recipe-check-fill: var(--color-accent);
+
+  /* Steps */
+  --recipe-step-indicator: rgba(10, 20, 28, 0.55);
+
+  /* Chef tip */
+  --recipe-tip-surface: rgba(255, 255, 255, 0.10);
+  --recipe-tip-border: rgba(255, 255, 255, 0.22);
+
+  /* Buttons inside panels (if you use them) */
+  --recipe-btn-secondary-bg: rgba(255, 255, 255, 0.10);
+  --recipe-btn-secondary-border: rgba(255, 255, 255, 0.22);
+  --recipe-btn-secondary-text: rgba(10, 20, 28, 0.82);
+
+  /* Hover helpers (optional but часто треба) */
+  --recipe-hover-surface: rgba(255, 255, 255, 0.14);
 }
 
 /* =================================================

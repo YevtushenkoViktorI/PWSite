@@ -1,0 +1,73 @@
+<!-- index.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borshch</title>
+    <link rel="stylesheet" href="css/recipe.css" />
+</head>
+
+<body class="recipe">
+    <div class="bg-layer" aria-hidden="true"></div>
+
+    <header class="recipe-nav">
+        <div class="container recipe-nav__inner">
+            <!-- Left: brand -->
+            <a class="recipe-nav__brand" href="index.html" aria-label="Home">
+                <span class="recipe-nav__logo" aria-hidden="true">
+                    <img src="css/images/icons/soup.svg" alt="" />
+                </span>
+                <span class="recipe-nav__title">Borsch Masterclass</span>
+            </a>
+
+            <!-- Center: segmented -->
+            <nav class="recipe-nav__tabs" aria-label="Primary">
+                <a class="recipe-tab" href="index.html">Home</a>
+                <a class="recipe-tab is-active" href="recipe.html">Recipe</a>
+                <a class="recipe-tab" href="#history">History</a>
+                <a class="recipe-tab" href="#shop">Shop</a>
+            </nav>
+
+            <!-- Right: action -->
+            <a class="recipe-nav__cta" href="#" role="button">Save</a>
+        </div>
+    </header>
+
+     <!-- ✅ ОЦЕ ГОЛОВНЕ: grid wrapper -->
+  <main class="recipe-page">
+    <div class="container recipe-layout">
+
+      <aside class="glass-panel ingredients-panel">
+        <header class="panel-header">
+          <div class="panel-header__row">
+            <div>
+              <h2 class="panel-title">Ingredients</h2>
+              <p class="panel-subtitle">FOR THE BASE</p>
+            </div>
+
+            <div class="servings-control" aria-label="Servings">
+              <button class="servings-btn" type="button">−</button>
+              <span class="servings-value">4 serv</span>
+              <button class="servings-btn" type="button">+</button>
+            </div>
+          </div>
+        </header>
+
+        <div class="ingredients-scroll">
+          ...
+        </div>
+      </aside>
+
+      <!-- ✅ Права панель (steps) теж тут, як 2-га колонка -->
+      <section class="glass-panel steps-panel">
+        ...
+      </section>
+
+    </div>
+  </main>
+</body>
+
+</html>
